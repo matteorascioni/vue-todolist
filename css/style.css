@@ -15,6 +15,10 @@ body {
     height: 100vh;
 }
 
+/* UTILITIES */
+.no-desktop {
+    display: none;
+}
 /* CONTENT CONTAINER */
 .content-container {
     display: flex;
@@ -65,6 +69,7 @@ body {
     cursor: pointer;
 }
 
+
 .span-img {
     display: flex;
     justify-content: center;
@@ -93,7 +98,7 @@ body {
 
 .center-content h1 {
     font-weight: 700;
-    margin-top: 20px;
+    padding-top: 20px;
     color: #fff;
 }
 
@@ -152,10 +157,44 @@ body {
     color: #4e6c7f;
 }
 
+/* MEDIA QUERY TABLET */
+@media screen and (max-width: 768px) {
+    /* UTILITIES */
+    .no-tablet {
+        display: none;
+    } 
+
+    .only-tablet {
+        display: block;
+    }
+
+    /* TABLET VISION */
+    .tablet-vision {
+        background: #aec7e0;
+    }
+
+    /* TOP AND BOTTOM IMAGES CONTENT */
+    .tablet-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top-content,
+    .bottom-content {
+        margin: 5px;
+    }
+
+    .top-content img,
+    .bottom-content img {
+        width: 400px;
+        height: 400px;
+        filter: none;
+    }
+
+    /* CENTER CONTENT */
+    .center-content {
+        height: 800px;
+    }
 
 
-
-
-
-
-
+}
