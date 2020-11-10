@@ -17,9 +17,10 @@
 </head>
 <body>
     <!-- DESKTOP CONTAINER -->
-    <div class="big-container no-tablet">
+    <div class="big-container">
+
         <!-- LEFT CONTAINER -->
-        <div class="content-container">
+        <div class="content-container tablet-content">
             <!-- TOP CONTENT -->
             <div class="top-content">
                 <img src="./img/newemotions.jpg" alt="">
@@ -41,7 +42,6 @@
             <!-- CENTER CONTAINER CONTENT -->
             <div class="center-content">
                 <h1>TO DO LIST 2020</h1>
-
                 <!-- LIST CONTENT -->
                 <div id="list" class="list-content">
                     <!-- ADD SOMETHING -->
@@ -52,7 +52,6 @@
                     <button @click="add">
                         Add to list
                     </button>
-
                     <!-- UL ITEMS -->
                     <ul v-if="listItems.length">
                         <li v-for="(item, index) in listItems" :key="item"> 
@@ -65,9 +64,9 @@
                 </div>
             </div>
         </div> 
-
+        
          <!-- RIGHT CONTAINER -->
-         <div class="content-container">
+         <div class="content-container tablet-content">
             <!-- TOP CONTENT -->
             <div class="top-content">
                 <img src="./img/takerelax.jpg" alt="">
@@ -84,71 +83,6 @@
             </div>
         </div>    
     </div>
-
-    <!-- TABLET VISION -->
-    <div class="tablet-vision only-tablet no-desktop">
-        <!-- TOP IMAGES CONTAINER -->
-        <div class="tablet-content ">
-            <div class="top-content">
-                <img src="./img/newemotions.jpg" alt="">
-                <div class="span-img">
-                    <span>Discover New Emotions</span>
-                </div>
-            </div>
-    
-            <div class="bottom-content">
-                <img src="./img/productivity.jpg" alt="">
-                <div class="span-img">
-                    <span>Increase Your Productivity</span>
-                </div>
-            </div>
-        </div>  
-        <!-- BOTTOM IMAGES CONTAINER -->
-        <div class="tablet-content mrg-bt40px">
-            <div class="top-content ">
-                <img src="./img/takerelax.jpg" alt="">
-                <div class="span-img">
-                <span>Take Care of Yourself</span>
-                </div>
-            </div>
-            <div class="bottom-content">
-                <img src="./img/readmore.jpg" alt="">
-                <div class="span-img">
-                    <span>Read More</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- CENTER CONTAINER -->
-        <div class="content-container">
-            <!-- CENTER CONTAINER CONTENT -->
-            <div class="center-content">
-                <h1>TO DO LIST 2020</h1>
-
-                <!-- LIST CONTENT -->
-                <div id="list" class="list-content">
-                    <!-- ADD SOMETHING -->
-                    <input type="text" placeholder="Add Something..."
-                           v-model="listValue"
-                           @keyup.enter="add"
-                    >
-                    <button @click="add">
-                        Add to list
-                    </button>
-
-                    <!-- UL ITEMS -->
-                    <ul v-if="listItems.length">
-                        <li v-for="(item, index) in listItems" :key="item"> 
-                            {{ item }}
-                            <span  @click="remove(index)"> 
-                                <i class="fas fa-times"></i>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-
 
     <!-- JAVASCRIPT -->
     <script src="./js/main.js"></script>

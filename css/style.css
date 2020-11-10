@@ -19,6 +19,7 @@ body {
 .no-desktop {
     display: none;
 }
+
 /* CONTENT CONTAINER */
 .content-container {
     display: flex;
@@ -68,7 +69,6 @@ body {
     filter: grayscale(0%);
     cursor: pointer;
 }
-
 
 .span-img {
     display: flex;
@@ -159,44 +159,39 @@ body {
 
 /* MEDIA QUERY TABLET */
 @media screen and (max-width: 768px) {
-    /* UTILITIES */
-    .no-tablet {
-        display: none;
-    } 
-
-    .only-tablet {
-        display: block;
-    }
-
-    .mrg-bt40px {
-        margin-bottom: 40px;
-    }
-
-    /* TABLET VISION */
-    .tablet-vision {
-        background: #aec7e0;
+    /* BIG CONTAINER */
+    .big-container {
+        display: flex;
+        flex-direction: column;
     }
 
     /* TOP AND BOTTOM IMAGES CONTENT */
-    .tablet-content {
+    .tablet-content{
         display: flex;
         flex-direction: row;
     }
 
+    /* TOP AND BOTTOM CONTENT IMG */
     .top-content,
     .bottom-content {
         margin: 5px;
     }
+
     .top-content img,
     .bottom-content img {
-        width: 400px;
+        width: 100%;
         height: 400px;
         filter: none;
     }
 
     /* CENTER CONTENT */
     .center-content {
-        height: 800px;
+        height: 600px;
+        margin-bottom: 40px;
+    }
+
+    .center-content h1 {
+        margin-top: 20px;
     }
 
     .list-content li span {
@@ -206,50 +201,54 @@ body {
 
 /* MEDIA QUERY IPHONE */
 @media screen and (max-width: 414px) {
-    /* UTILITIES */
-    .no-mobile {
-     display: none;   
-    }  
-    
-    .only-mobile {
-        display: block,
+      /* BIG CONTAINER */
+      .big-container {
+        display: flex;
+        flex-direction: column;
     }
 
-
     /* TOP AND BOTTOM IMAGES CONTENT */
-    .tablet-content {
+    .tablet-content{
         display: flex;
         flex-direction: column;
     }
 
     .top-content,
     .bottom-content {
-        width: 96%;
-        margin: 5px;
+        max-width: 96%;
     }
 
     .top-content img,
     .bottom-content img {
-        display: flex;
-        flex-grow: 1;
         height: 400px;
-        filter: none;
+    }
+    
+     /* CENTER CONTENT */
+     .center-content {
+        height: 500px;
+        margin-bottom: 40px;
     }
 
-    /* CENTER CONTENT */
-    .list-content {
+     .list-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 94%;
-        height: 700px;
+        width: 90%;
+        height: 450px;
     }
 
     .list-content input {
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .list-content button {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
+   
+     
+
+
+
+
 }
