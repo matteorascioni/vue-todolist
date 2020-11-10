@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue ToDo</title>
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- CSS -->
@@ -45,7 +45,10 @@
                 <!-- LIST CONTENT -->
                 <div id="list" class="list-content">
                     <!-- ADD SOMETHING -->
-                    <input type="text" placeholder="Add Something..." v-model="listValue">
+                    <input type="text" placeholder="Add Something..."
+                           v-model="listValue"
+                           @keyup.enter="add"
+                    >
                     <button @click="add">
                         Add to list
                     </button>
@@ -54,7 +57,7 @@
                     <ul v-if="listItems.length">
                         <li v-for="(item, index) in listItems" :key="item"> 
                             {{ item }}
-                            <span @click="remove(index)"> 
+                            <span  @click="remove(index)"> 
                                 <i class="fas fa-times"></i>
                             </span>
                         </li>
@@ -69,7 +72,7 @@
             <div class="top-content">
                 <img src="./img/takerelax.jpg" alt="">
                 <div class="span-img">
-                <span>Take Relax</span>
+                <span>Take Care of Yourself</span>
                 </div>
             </div>
             <!-- BOTTOM CONTENT -->
