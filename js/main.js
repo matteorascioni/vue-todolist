@@ -6,8 +6,11 @@ const list = new Vue({
     },
     methods: {
         add() {
-            this.listItems.push(this.listValue);
-            this.listValue = '';
+            if (this.listValue.trim() != '') {
+                this.listItems.push(this.listValue);
+
+                this.listValue = '';
+            }
         },
         remove(itemIndex) {
             this.listItems.splice(itemIndex, 1);

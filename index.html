@@ -45,9 +45,10 @@
                 <!-- LIST CONTENT -->
                 <div id="list" class="list-content">
                     <!-- ADD SOMETHING -->
-                    <input type="text" placeholder="Add Something..."
-                           v-model="listValue"
-                           @keyup.enter="add"
+                    <input type="text" 
+                        placeholder="Add Something..."
+                        v-model="listValue"
+                        @keyup.enter="add"
                     >
                     <button @click="add">
                         Add to list
