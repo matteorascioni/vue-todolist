@@ -10,7 +10,7 @@ const list = new Vue({
             this.listValue = '';
         },
         remove(itemIndex) {
-            this.listItems.splice(itemIndex,1 );
+            this.listItems.splice(itemIndex, 1);
         }
     }
 });
